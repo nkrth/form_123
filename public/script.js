@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault()
         if ($('#firstName').val() == '') $('#noFirstName').html('Please enter first name')
         else if ($('#lastName').val() == '') $('#noLastName').html('Please enter last name')
-        else if ($('input[name="gender"]').prop('checked') == false) $('#noGender').html('Please enter gender')
+        else if (!$('input[name="gender"]:checked') $('#noGender').html('Please enter gender')
         else if ($('select#country').val() == 'select') $('#noCountry').html('Please enter country')
         else if ($('textarea#address').val() == '') $('#noAddress').html('Please enter address')
         else if ($('#email').val() == '') $('#noEmail').html('Please enter email')
