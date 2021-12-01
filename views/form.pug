@@ -1,0 +1,96 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+        link(rel="stylesheet" href="style.css")
+        title Form
+    body
+    div.container
+        form#registration-form(method="post" action="/")
+            div.container
+
+                h1 Registration Form
+
+                //Name
+                div.row
+                    div.form-group.col-md-6
+                        label.control-label(for="firstName") 
+                            b First Name
+                        input#firstName.form-control(placeholder="First Name" name="firstname")
+                        small#noFirstName.error
+                    
+                    div.form-group.col-md-6
+                        label.control-label(for="lastName")
+                            b Last Name
+                        input#lastName.form-control(placeholder="Last Name" name="lastname")
+                        small#noLastName.error
+
+                //Gender
+                div.form-check
+                    b Gender
+                    br
+                    input#male.form-check-input(type="radio" value="male" name="gender")
+                    label.form-check-label(for="male") Male
+                    input#female.form-check-input(type="radio" value="female" name="gender")
+                    label.form-check-label(for="female") Female
+                    input#other.form-check-input(type="radio" value="other" name="gender")
+                    label.form-check-label(for="other") Other
+                    br
+                    small#noGender.error
+
+                //Country
+                div.form-group
+                    label(for="country")
+                        b Country
+                    select#country(name="country")
+                        option(value="select") Select...
+                        option(value="India") India
+                        option(value="US") US
+                        option(value="Canada") Canada
+                        option(value="UK") UK
+                    small#noCountry.error
+
+                //Address
+                div.form-group
+                    label(for="address")
+                        b Address
+                    textarea#address.form-control(placeholder="Enter Address" name="address")
+                    small#noAddress.error
+
+                //Email
+                div.form-group
+                    label(for="email")
+                        b Email
+                    input#email.form-control(type="email" placeholder="Enter Email" name="email")
+                    small#noEmail.error
+
+                //Password
+                div.form-group
+                    label(for="psw")
+                        b Password
+                    input#psw.form-control(type="password" placeholder="Enter Password" name="password")
+                    small#noPsw.error
+                div.form-group
+                    label(for="psw2")
+                        b Re-enter Password
+                    input#psw2.form-control(type="password" placeholder="Re-enter Password")
+                    small#noPsw2.error
+
+                //Checkboxes
+                div.form-check
+                    input#check1.form-check-input(type="checkbox" value="")
+                    label(class="form-check-label" for="check1")
+                        I agree to 
+                        a(href="#") terms
+                        and 
+                        a(href="#") conditions
+                    small#noCheck1.error
+                div.form-check
+                    input#check2.form-check-input(type="checkbox" value="")
+                    label.form-check-label(for="check2") I agree to policies, conduct and notice.
+                    small#noCheck2.error
+                //Button
+                button#register.btn.btn-primary.btn-lg(type="submit") Register
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    script(src="script.js")
