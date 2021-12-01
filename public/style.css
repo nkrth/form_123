@@ -1,0 +1,11 @@
+.error {
+    color: red;
+}
+
+div.container {
+    background-color: antiquewhite;
+}
+
+[class*="col-"] {
+    padding-left: 0;
+}
